@@ -1,0 +1,14 @@
+ansible-vault create secret.yml şifreverilir 1234 yamılın içine password: Pp123456789 yazılır.
+
+ansible-vault view secret.yml içine bakılır yamılın.
+
+
+
+
+ansible-playbook docker_postgre.yml --ask-vault-pass playbook şifre girerek çalışır.
+
+ansible _ansible_postgresql -m shell -a "docker images ; docker ps" bilgi alınır
+ansible-playbook docker_postgre.yml --ask-vault-pass --list-tasks   bilgi alınır
+
+ansible-playbook docker_nodejs.yml
+ansible _ansible_nodejs -m shell -a "sudo docker ps -a" container çalışıyor mu bakılır
